@@ -30,6 +30,8 @@ public class Controller {
 		ObjectMapper mapper = new ObjectMapper();
 		ObjectNode node = mapper.createObjectNode();
 		
+		System.out.println("Hi Heroku");
+		
 		List< String> list = headers.get("x-okta-verification-challenge");
 		
 	    for (String string : list) {
@@ -48,8 +50,8 @@ public class Controller {
 	@RequestMapping(method=RequestMethod.POST, path="/")
 	public String ResponseHook(@RequestBody String body) {
 		
-		
-	
+		System.out.println("Hi Heroku");
+		System.out.println(body);
 		return body;
 		
 		
